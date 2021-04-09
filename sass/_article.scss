@@ -1,0 +1,103 @@
+article {
+  display: flex;
+  margin-top: 0.5em;
+
+  .leftSection {
+    // background-color: pink;
+    display: flex;
+    flex-direction: column;
+    color: $text-color;
+    width: 20vw;
+    height: 100vh;
+
+    .topLeftSection,
+    .middleLeftSection {
+      border-bottom: 1px solid lighten($search-bar-border, 20%);
+      padding: 0.5em 0;
+
+      @include mq(1312px) {
+        padding: 0;
+      }
+
+      div {
+        display: flex;
+        align-items: center;
+
+        @include mq(1312px) {
+          flex-direction: column;
+          padding-bottom: 1em;
+        }
+
+        span {
+          padding: 0.4em 1.4em 0.4em 0;
+          font-size: 0.8em;
+
+          @include mq(1312px) {
+            font-size: 0.5em;
+          }
+
+          img {
+            width: 1.3em;
+            height: 1.2em;
+            filter: grayscale(100%);
+            opacity: 0.8;
+
+            @include mq(1312px) {
+              width: 2em;
+              height: 1.8em;
+            }
+          }
+        }
+
+        span:first-child {
+          padding-top: 0.7em;
+        }
+      }
+
+      @include mq(1312px) {
+        border-bottom: none;
+      }
+    }
+
+    .middleLeftSection {
+      .hideInSmall {
+        display: none;
+
+        @include mq(1312px) {
+          // display: none;
+        }
+      }
+    }
+
+    .bottomLeftSection {
+      margin-top: 1em;
+      font-size: 0.8em;
+      font-weight: 600;
+      font-stretch: semi-condensed;
+      color: lighten($text-color, 25%);
+
+      img {
+        width: 70%;
+      }
+
+      @include mq(1312px) {
+        display: none;
+      }
+    }
+  }
+
+  .leftSection.narrowMenu {
+    width: 7vw;
+    transform: translateX(-1em);
+  }
+
+  .active {
+    color: red;
+
+    span {
+      img {
+        filter: none;
+      }
+    }
+  }
+}

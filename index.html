@@ -1,0 +1,122 @@
+<!-- https://youtube.googleapis.com/youtube/v3/videos?part=statistics&id=6xz1bay-6dQ&key=[YOUR_API_KEY] -->
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+      integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <link rel="stylesheet" href="dist/css/style.min.css" />
+    <script src="js/script.js" defer></script>
+    <title>YouTube</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <header>
+        <div class="headerLeft">
+          <!-- hamberger button -->
+          <a href="#" class="hamburgerBar" id="hamburgerBar">
+            <i class="fas fa-bars"></i>
+          </a>
+
+          <!-- YouTube logo -->
+          <a href="#home" class="youtubeLogo">
+            <img class="mainLogo" src="img/mainLogo.png" alt="YouTube Logo">
+          </a>
+        </div>
+
+        <div class="headerMiddle">
+          <!-- Search Bar -->
+          <form id="searchBar" class="searchBar" role="search">
+            <input type="text" id="search" autocomplete="off" role="searchBox" placeholder="Search" />
+            <button id="searchButton" class="button searchButton" type="submit" aria-label="Submit button">
+              <i class="fas fa-search"></i>
+            </button>
+          </form>
+          <!-- Microphone -->
+          <span class="mic">
+            <img src="img/mic.png" alt="Microphone">
+          </span>
+        </div>
+
+        <div class="headerRight">
+          <!-- buttons -->
+          <div class="buttons">
+            <!-- create Button -->
+            <img class="createVideo" src="img/createVideo.png" alt="Create Video">
+
+            <!-- Youtube Apps Button -->
+            <img class="YoutubeApp" src="img/YoutubeApp.png" alt="Youtube App">
+
+            <!-- Notification Button -->
+            <img class="notifications" src="img/notifications.png" alt="Notifications">
+          </div>
+
+          <!-- Account -->
+          <span class="account"><img src="img/account.png" alt="Account"></span>
+        </div>
+      </header>
+
+      <article>
+        <section class="leftSection" id="leftSection">
+          <div class="topLeftSection">
+            <div class="active">
+              <span><img src="img/home-red.png" alt="Home"></span>
+              <span>Home</span>
+            </div>
+            <div>
+              <span><img src="img/explore.png" alt="Explore"></span>
+              <span>Explore</span>
+            </div>
+            <div>
+              <span><img src="img/subscriptions.png" alt="Subscriptions"></span>
+              <span>Subscriptions</span>
+            </div>
+          </div>
+          <div class="middleLeftSection" id="middleLeftSection">
+            <div>
+              <span><img src="img/library.png" alt="Library"></span>
+              <span>Library</span>
+            </div>
+            <div class = "hideInSmall">
+              <span><img src="img/history.png" alt="History"></span>
+              <span>History</span>
+            </div>
+            <div class = "hideInSmall">
+              <span><img src="img/Yourvideos.png" alt="Your Videos"></span>
+              <span>Your videos</span>
+            </div>
+            <div class = "hideInSmall">
+              <span><img src="img/watchLater.png" alt="Watch Later"></span>
+              <span>Watch later</span>
+            </div>
+            <div class = "hideInSmall">
+              <span><img src="img/postman.png" alt="Postman"></span>
+              <span>Postman</span>
+            </div>
+            <div class = "hideInSmall">
+              <span><img src="img/showMore.png" alt="Show more"></span>
+              <span>Show more</span>
+            </div>
+          </div>
+          <div class="bottomLeftSection">
+            <p>SUBSCRIPTIONS</p>
+            <img src="img/subscriptionMenuImage.png" alt="Subscription Menu Image">
+          </div>
+        </section>
+
+        <section class="rightSection">
+          <div class="deviceNotification"></div>
+          <div class="tags"></div>
+          <div class="ads"></div>
+          <div class="videos"></div>
+        </section>
+      </article>
+    </div>
+
+  </body>
+
+</html>
