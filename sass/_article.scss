@@ -9,11 +9,12 @@ article {
     color: $text-color;
     width: 20vw;
     height: 100vh;
+    // transition: 0.2s ease-in;
 
     .topLeftSection,
     .middleLeftSection {
       border-bottom: 1px solid lighten($search-bar-border, 20%);
-      padding: 0.5em 0;
+      padding: 0.5em 1.3em;
 
       @include mq(1312px) {
         padding: 0;
@@ -29,27 +30,26 @@ article {
         }
 
         span {
-          padding: 0.4em 1.4em 0.4em 0;
+          padding: 0.6em 1.4em 0.6em 0;
           font-size: 0.8em;
+          // justify-self: left;
 
           @include mq(1312px) {
             font-size: 0.5em;
           }
 
-          img {
-            width: 1.3em;
-            height: 1.2em;
-            filter: grayscale(100%);
+          i {
+            font-size: 1.3em;
             opacity: 0.8;
 
             @include mq(1312px) {
-              width: 2em;
-              height: 1.8em;
+              font-size: 2em;
             }
           }
         }
 
         span:first-child {
+          width: 3em;
           padding-top: 0.7em;
         }
       }
@@ -60,17 +60,23 @@ article {
     }
 
     .middleLeftSection {
+      .hideInClick,
       .hideInSmall {
         display: none;
+      }
 
+      div + div {
         @include mq(1312px) {
-          // display: none;
+          // .hideInSmall {
+          //   display: none;
+          // }
         }
       }
     }
 
     .bottomLeftSection {
       margin-top: 1em;
+      padding: 0 1.3em;
       font-size: 0.8em;
       font-weight: 600;
       font-stretch: semi-condensed;
@@ -88,7 +94,31 @@ article {
 
   .leftSection.narrowMenu {
     width: 7vw;
-    transform: translateX(-1em);
+    transform: translateX(-0.8em);
+    // transition: 0.2s;
+
+    .topLeftSection,
+    .middleLeftSection {
+      border-bottom: none;
+      padding: 0;
+
+      div {
+        flex-direction: column;
+        padding: 0.7em 0;
+
+        span {
+          padding: 0.2em 0;
+        }
+
+        span:first-child {
+          width: auto;
+        }
+
+        span:nth-child(2) {
+          font-size: 0.5em;
+        }
+      }
+    }
   }
 
   .active {
